@@ -1,0 +1,249 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+            <section id="demo1">
+                <h1>DEMO #1</h1>
+                <ul>
+                    <li>
+                        <ul class="demo-2 effect">
+                            <li>
+                                <h2 class="zero">This is a cool title!</h2>
+                                <p class="zero">Lorem ipsum dolor sit amet.</p>
+                            </li>
+
+                            <li><img class="top" src="http://netdna.webdesignerdepot.com/uploads7/3-elegant-css3-image-caption-effects/images/image1.jpg" alt=""></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="demo-2 effect">
+                            <li>
+                                <h2 class="zero">This is a cool title!</h2>
+                                <p class="zero">Lorem ipsum dolor sit amet.</p>
+                            </li>
+
+                            <li><img class="top" src="http://netdna.webdesignerdepot.com/uploads7/3-elegant-css3-image-caption-effects/images/image2.jpg" alt=""></li>
+                        </ul>
+                    </li>
+
+
+
+                    <li>
+                        <ul class="demo-2 effect">
+                            <li>
+                                <h2 class="zero">This is a cool title!</h2>
+                                <p class="zero">Lorem ipsum dolor sit amet.</p>
+                            </li>
+
+                            <li><img class="top" src="http://netdna.webdesignerdepot.com/uploads7/3-elegant-css3-image-caption-effects/images/image3.jpg" alt=""></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </section>
+
+            <section id="demo2">
+                <h1>DEMO #2</h1>
+                <ul>
+                    <li>
+                        <ul class="demo-3">
+                            <li>
+                                <figure>
+                                    <img src="http://netdna.webdesignerdepot.com/uploads7/3-elegant-css3-image-caption-effects/images/image1.jpg" alt="">
+                                    <figcaption>
+                                        <h2>This is a cool title!</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+                                    </figcaption>
+                                </figure>
+
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="demo-3">
+                            <li>
+                                <figure>
+                                    <img src="http://netdna.webdesignerdepot.com/uploads7/3-elegant-css3-image-caption-effects/images/image2.jpg" alt="">
+                                    <figcaption>
+                                        <h2>This is a cool title!</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="demo-3">
+                            <li>
+                                <figure>
+                                    <img src="http://netdna.webdesignerdepot.com/uploads7/3-elegant-css3-image-caption-effects/images/image3.jpg" alt="">
+                                    <figcaption>
+                                        <h2>This is a cool title!</h2>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nost.</p>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        #container
+        {
+            color: #5E976E;
+
+        }
+        /* COMMON */
+        body{background: #3498db;}
+        ul {
+            margin: 20px auto;
+            width: 30%;
+        }
+        ul li {
+            display: inline-block;
+            list-style: none;
+            margin: 0 10px;
+        }
+
+        section{
+            clear:both;
+            overflow:hidden;
+        }
+        section h1{
+            text-align:center;
+            color: #fff;
+            padding: 20px 0 0 0;
+        }
+
+        .demo-2 {
+            position:relative;
+            width:300px;
+            height:200px;
+            overflow:hidden;
+            float:left;
+            margin-right:20px;
+            background-color:rgba(26,76,110,0.5)
+        }
+        .demo-2 p,.demo-2 h2 {
+            color:#fff;
+            padding:10px;
+            left:-20px;
+            top:20px;
+            position:relative
+        }
+        .demo-2 p {
+            font-family:'Lato';
+            font-size:12px;
+            line-height:18px;
+            margin:0
+        }
+        .demo-2 h2 {
+            font-size:20px;
+            line-height:24px;
+            margin:0;
+            font-family:'Lato'
+        }
+        .effect img {
+            position:absolute;
+            left:0;
+            bottom:0;
+            cursor:pointer;
+            margin:-12px 0;
+            -webkit-transition:bottom .3s ease-in-out;
+            -moz-transition:bottom .3s ease-in-out;
+            -o-transition:bottom .3s ease-in-out;
+            transition:bottom .3s ease-in-out
+        }
+        .effect img.top:hover {
+            bottom:-96px;
+            padding-top:100px
+        }
+        h2.zero,p.zero {
+            margin:0;
+            padding:0
+        }
+
+        /* DEMO 2 / 3*/
+        .demo-3 {
+            position:relative;
+            width:300px;
+            height:200px;
+            overflow:hidden;
+            float:left;
+            margin-right:20px
+        }
+        .demo-3 figure {
+            margin:0;
+            padding:0;
+            position:relative;
+            cursor:pointer;
+            margin-left:-50px
+        }
+        .demo-3 figure img {
+            display:block;
+            position:relative;
+            z-index:10;
+            margin:-15px 0
+        }
+        .demo-3 figure figcaption {
+            display:block;
+            position:absolute;
+            z-index:5;
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            box-sizing:border-box
+        }
+        .demo-3 figure h2 {
+            font-family:'Lato';
+            color:#fff;
+            font-size:20px;
+            text-align:left
+        }
+        .demo-3 figure p {
+            display:block;
+            font-family:'Lato';
+            font-size:12px;
+            line-height:18px;
+            margin:0;
+            color:#fff;
+            text-align:left
+        }
+        .demo-3 figure figcaption {
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            padding:29px 44px;
+            background-color:rgba(26,76,110,0.5);
+            text-align:center;
+            backface-visibility:hidden;
+            -webkit-transform:rotateY(-180deg);
+            -moz-transform:rotateY(-180deg);
+            transform:rotateY(-180deg);
+            -webkit-transition:all .5s;
+            -moz-transition:all .5s;
+            transition:all .5s
+        }
+        .demo-3 figure img {
+            backface-visibility:hidden;
+            -webkit-transition:all .5s;
+            -moz-transition:all .5s;
+            transition:all .5s
+        }
+        .demo-3 figure:hover img,figure.hover img {
+            -webkit-transform:rotateY(180deg);
+            -moz-transform:rotateY(180deg);
+            transform:rotateY(180deg)
+        }
+        .demo-3 figure:hover figcaption,figure.hover figcaption {
+            -webkit-transform:rotateY(0);
+            -moz-transform:rotateY(0);
+            transform:rotateY(0)
+        }
+    </style>
+{% endblock %}
